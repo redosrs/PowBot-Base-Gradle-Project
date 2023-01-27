@@ -1,6 +1,7 @@
 import org.powbot.api.Condition;
 import org.powbot.api.rt4.*;
 import org.powbot.api.script.*;
+import org.powbot.mobile.service.ScriptUploader;
 
 // Example of GUI option which asks for a string
 @ScriptConfiguration(name = "NPC", description = "NPC to fight", optionType = OptionType.STRING)
@@ -35,6 +36,7 @@ public class SampleScript extends AbstractScript {
 
     public static void main(String[] args) {
         // Start your script with this function. Make sure your device is connected via ADB, and only one is connected
-        new SampleScript().startScript();
+
+        new ScriptUploader().uploadAndStart("Example Script", "", "127.0.0.1:5555", false, false);
     }
 }
