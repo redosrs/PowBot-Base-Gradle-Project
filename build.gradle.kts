@@ -23,13 +23,18 @@ dependencies {
     implementation("org.powbot:client-sdk-loader:1.+")
     implementation("com.google.guava:guava:31.1-jre")
 
-    implementation("com.google.protobuf:protobuf-kotlin:3.19.4")
+    implementation("com.google.protobuf:protobuf-kotlin:3.21.6")
+
+    implementation("io.grpc:grpc-okhttp:1.49.0")
+    implementation("io.grpc:grpc-protobuf-lite:1.49.0")
+    implementation("io.grpc:grpc-kotlin-stub:1.2.1")
+    implementation("io.grpc:grpc-stub:1.49.0")
 }
 
 protobuf {
     protoc {
         // The artifact spec for the Protobuf Compiler
-        artifact = "com.google.protobuf:protoc:3.19.4"
+        artifact = "com.google.protobuf:protoc:3.21.6"
     }
     // Enable Kotlin generation
     generateProtoTasks {
